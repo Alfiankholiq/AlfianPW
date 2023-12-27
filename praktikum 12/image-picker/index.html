@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function image_picker(){
+            const daftar_gambar = ["tottenham-01.jpg","tottenham-02.jpg","tottenham-03.jpg"];
+            let pilihan = document.getElementById("option").value;
+
+            if( pilihan == "tottenham-01"){
+                let select = daftar_gambar[0];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if(pilihan == "tottenham-02"){
+                let select = daftar_gambar[1];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if(pilihan == "tottenham-03"){
+                let select = daftar_gambar[2];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+       }
+
+    </script>
+</head>
+<body>
+    <h1>image picker</h1>
+
+    <select name="" id="option" onchange="image_picker()">
+        <option value=""> pilih gambar </option>
+        <option value="tottenham-01"> tottenham-01 </option>
+        <option value="tottenham-02"> tottenham-02 </option>
+        <option value="tottenham-03"> tottenham-03 </option>
+    </select>
+    
+    <div class="container">
+        <img id="gambar" width="500px">
+    </div>
+</body>
+</html>
